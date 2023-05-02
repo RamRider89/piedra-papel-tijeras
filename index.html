@@ -1,0 +1,66 @@
+<html lang="es">
+<head>
+
+<link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piedra, Papel o Tijera</title>
+
+</head>
+
+
+
+<body>
+
+<div id="app">
+    <div id="titulo">
+        <h1>Piedra, Papel o Tijeras </h1>
+    </div>
+
+    <div class="contenido">
+        <button id="restarGame">RESET</button>
+    </div>
+
+    <div class="contenido">
+        <div class="contador">
+            <span class="badge badgeUsuario">Usuario</span>
+            <span class="badge badgeMaquina">Maquina</span>
+            <div>
+                <span id="contadorUser">0</span>
+                <b>:</b>
+                <span id="contadorMaquina">0</span>
+            </div>     
+        </div>
+    </div>
+
+    <div class="contenido">
+        <div type="button" id="piedraBtn" class="botonesJuego"></div>
+        <div type="button" id="papelBtn" class="botonesJuego"></div>
+        <div type="button" id="tijeraBtn" class="botonesJuego"></div>
+    </div>
+
+</div>
+
+<div id="kingWin"></div>
+<div id="kingLose"></div>
+
+<!-- Modal content -->
+<div id="modalGame" class="modal-content">
+    <div class="modal-header">
+        <span class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+        <span id="resultAviso"></span>
+        <p id="resultAvisoMaquina"></p>
+    </div>
+</div>
+
+<div class="modalShadow"></div>
+
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>
+

@@ -1,0 +1,263 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/dados.jpg);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #140330;
+    font-family: monospace;
+    font-size: 1.6rem;
+    padding: 30px 0;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#titulo{
+    color: white;
+    display: flex;
+    background: #ffffff36;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #ffffffb0;
+}
+
+#restarGame{
+    color: white;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+#restarGame:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.botonesJuego{
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: linear-gradient(rgba(255, 255, 255, 0.6), rgba(78, 78, 78, 0.6));
+    border-radius: 12px;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 30px;
+}
+
+#piedraBtn {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(78, 78, 78, 0.6)),url(../img/piedra.png);
+    background-size: cover;
+}
+
+#piedraBtn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+#papelBtn {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(78, 78, 78, 0.6)), url(../img/papel.png);
+    background-size: cover;
+}
+
+#papelBtn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+#tijeraBtn {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(78, 78, 78, 0.6)), url(../img/tijera.png);
+    background-size: cover;
+}
+
+#tijeraBtn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.contador{
+    border: 2px solid white;
+    width: 250px;
+    padding: 10px;
+    font-size: 60px;
+    color: white;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.badge {
+    font-size: 24px;
+    background: #9630a5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.badgeUsuario {
+    position: absolute;
+    left: -68px;
+}
+
+.badgeMaquina {
+    position: relative;
+    right: -145px;
+}
+
+.contador div{
+    position: absolute;
+    display: flex;
+}
+
+#congrats{
+    position: absolute;
+    left: 0;
+    width: 587px;
+    height: 263px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/7FZs.gif);
+    background-size: cover;
+}
+
+.modalShadow{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000026;
+    padding: 0;
+    margin: 0;
+}
+
+#modalGame{display: none;z-index: 1000;}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #521a4d;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 16px;
+    text-align: center;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #521a4d;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute;
+    background: linear-gradient(rgba(255,255,255, 1.0), rgba(255, 255, 255, 0.9));
+    margin: auto;
+    padding: 0;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.8s;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#resultAvisoMaquina{
+font-size: 14px;
+}
+
+#resultAviso{font-weight: bold;}
+
+
+#kingWin{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 375px;
+    height: 360px;
+    background-image: url(../img/pro.png);
+    background-size: cover;
+    -webkit-user-select: none;
+    margin: auto;
+    animation-name: animatewin;
+    animation-duration: 0.8s;
+}
+
+#kingLose{
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background-image: url(../img/cry.png);
+    background-size: cover;
+    -webkit-user-select: none;
+    margin: auto;
+    animation-name: animatewin;
+    animation-duration: 0.8s;
+}
+
+/* Add Animation */
+@keyframes animatewin {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
