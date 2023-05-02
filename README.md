@@ -1,2 +1,3 @@
 # piedra-papel-tijeras
- Javascripta Practica Platzi
+ JavaScript Practica Platzi
+https://platzi.com/cursos/basico-javascript/
